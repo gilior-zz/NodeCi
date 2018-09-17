@@ -7,7 +7,7 @@ beforeEach(async () => {
 
     proxyPage = await CustomPage.buildPage();
 
-    await proxyPage.goto('http://localhost:3000');     
+    await proxyPage.goto('http://localhost:3000');
 })
 
 afterEach(async () => {

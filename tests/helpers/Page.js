@@ -13,7 +13,7 @@ class Page {
     static async buildPage() {
         const browser = await ptr.launch({
             headless: true,
-            args: ['--no-snadbox'],
+            args: ['--no-sandbox'],
         })
         const page = await browser.newPage();
         const customPage = new Page(page, browser);
