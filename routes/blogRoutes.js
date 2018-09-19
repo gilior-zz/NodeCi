@@ -21,9 +21,10 @@ module.exports = app => {
     });
 
     app.post('/api/blogs', requireLogin, clearCache, async (req, res) => {
-        const {title, content} = req.body;
+        const {title, content,imageUrl} = req.body;
         // req.session === {passport: {user: '5a85'}}
         const blog = new Blog({
+            imageUrl,
             title,
             content,
             _user: req.user.id
